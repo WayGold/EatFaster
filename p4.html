@@ -1,0 +1,128 @@
+<html>
+
+<head>
+	<title> time </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="theme.css">
+
+	<style>
+	.dropbtn:hover, .dropbtn:focus {
+		//background-color: #2980B9;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 160px;
+		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.dropdown a:hover {background-color: #ddd;}
+
+	.show {display: block;}
+	</style>
+
+</head>
+
+<body>
+	<!-- ----------------------------------------------------------------------------->
+	<div class="screen">
+
+		<h1>Projected Wait Time</h1>
+
+		<button onclick="window.location.href='current.html'">Current</button>
+
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Time...</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="p4.html">.....</a>
+				<a href="p4.html">7:30 pm</a>
+				<a href="p4.html">8:00 pm</a>
+				<a href="p4.html">8:30 pm</a>
+				<a href="p4.html">9:00 pm</a>
+				<a href="p4.html">9:30 pm</a>
+				<a href="p4.html">10:00 pm</a>
+				<a href="p4.html">10:30 pm</a>
+				<a href="p4.html">11:00 pm</a>
+				<a href="p4.html">11:30 pm</a>
+				<a href="p4.html">......</a>
+			</div>
+		</div>
+
+		<script>
+		/* When the user clicks on the button,
+		toggle between hiding and showing the dropdown content */
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+			if (!event.target.matches('.dropbtn')) {
+
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+		</script>
+
+		<!---------------------------------------------------------------------->
+
+
+
+		<!--- <input class="dropbtn1" style="float: left" type="submit" value="Current" ></input> -->
+
+
+		<div class="list">
+			<p class="restaurant">
+				<a href="p3.html"> 1. RestaurantA  00:05 </a>
+				<input type="button" class="favbutton"></input>
+			</p>
+			<p class="restaurant">
+				<a href="p3.html"> 2. RestaurantB  00:06 </a>
+				<input type="button" class="favbutton"></input>
+			</p>
+			<p class="restaurant">
+				<a href="p3.html"> 3. RestaurantC  00:07 </a>
+				<input type="button" class="favbutton"></input>
+			</p>
+			<p class="restaurant">
+				<a href="p3.html"> 4. RestaurantD  00:10 </a>
+				<input type="button" class="favbutton"></input>
+			</p>
+			<p class="restaurant">
+				<a href="p3.html"> 5. RestaurantE  00:15 </a>
+				<input type="button" class="favbutton"></input>
+			</p>
+		</div>
+
+		<a href="index.html">
+			<input style="margin-left: 160px" type="submit" value="HOME" ></input>
+		</a>
+
+</div>
+
+</body>
+</html>
